@@ -1,0 +1,19 @@
+.Logo {
+  display: flex;
+  position: relative;
+
+  img {
+    width: 5rem;
+    height: 4rem;
+  }
+}
+
+.LogoName {
+  position: absolute;
+  top: 50%;
+  left: 5.5rem;
+  transform: translateY(-50%);
+  
+  color: white;
+  font-size: 500;
+}

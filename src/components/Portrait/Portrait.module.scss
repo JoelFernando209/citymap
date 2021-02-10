@@ -1,0 +1,14 @@
+.Portrait {
+  padding: 3rem 10rem;
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, #0470DC, #13F1FC);
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.PortraitSearch {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
