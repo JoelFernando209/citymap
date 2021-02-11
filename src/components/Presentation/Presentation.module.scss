@@ -1,0 +1,39 @@
+.Presentation {
+  padding: 10rem 0;
+  background-color: white;
+  margin-top: -1.2rem;
+  transform: rotate(2deg);
+  
+  display: flex;
+  justify-content: center;
+  
+  position: relative;
+  z-index: 20;
+}
+
+.Container {
+  transform: rotate(-2deg);
+
+  img {
+    width: 55rem;
+    height: 40rem;
+  }
+}
+
+.Title, .Subtitle {
+  text-align: center;
+  color: #4F79A4;
+}
+
+.Title {
+  font-size: 4.5rem;
+  font-size: 600;
+  font-family: 'Gilroy-Bold', sans-serif;
+}
+
+.Subtitle {
+  font-size: 3.5rem;
+  font-size: 300;
+  font-family: 'Gilroy-Regular', sans-serif;
+  margin-bottom: 3rem;
+}

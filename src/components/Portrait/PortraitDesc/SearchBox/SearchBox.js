@@ -1,6 +1,8 @@
 import React from 'react';
 import Input from 'antd/lib/input';
 
+import { MdLocationOn } from 'react-icons/md';
+
 import classes from './SearchBox.module.scss';
 
 const { Search } = Input;
@@ -18,6 +20,7 @@ const SearchBox = () => {
         padding: '1rem',
         borderRadius: '1rem'
       }}
+      prefix={<MdLocationOn color='#13F1FC' />}
     />
   );
 };

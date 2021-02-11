@@ -7,4 +7,10 @@ html {
 body {
   font-size: 1.5rem;
   font-family: 'Cabin', sans-serif;
+  overflow-x: hidden;
+}
+
+html, body {
+  width: initial !important;
+  height: initial !important;
 }

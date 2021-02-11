@@ -1,10 +1,10 @@
 import './App.css';
 
-import Portrait from './components/Portrait/Portrait';
+import HomePage from './containers/HomePage/HomePage';
 
 const App = () => {
   return (
-    <Portrait />
+    <HomePage />
   );
 }
 

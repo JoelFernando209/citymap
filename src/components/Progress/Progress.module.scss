@@ -1,0 +1,103 @@
+@mixin animationScroll() {
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+.Progress {
+  padding: 0 6rem;
+  position: relative;
+}
+
+.SnakeProgress {
+  overflow: hidden;
+  background-color: rgba(#E6E8EC, 10%);
+  
+  &::after {
+    content: '';
+    width: 100%;
+    height: 0%;
+    background-color: #70DDFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: progress 1s linear;
+    
+    @include animationScroll();
+  }
+}
+
+.SnakeProgressLeftVertical {
+  width: 15rem;
+  height: 25rem;
+  border-radius: 1rem;
+  border-bottom-left-radius: 6rem;
+  position: relative;
+}
+
+.SnakeProgressHorizontal {
+  width: calc(100% - 26rem);
+  height: 15rem;
+  
+  position: absolute;
+  top: 10rem;
+  left: 20rem;
+  border-top-right-radius: 6rem;
+}
+
+.SnakeProgressRightVertical {
+  width: 15rem;
+  height: 45rem;
+  position: absolute;
+  right: 6rem;
+  border-bottom-right-radius: 6rem;
+}
+
+.SnakeProgressLastHorizontal {
+  width: calc(100% - 26rem);
+  height: 15rem;
+  
+  position: absolute;
+  top: 55rem;
+  border-top-left-radius: 6rem;
+}
+
+.SnakeProgressRightLastVertical {
+  width: 15rem;
+  height: 45rem;
+  
+  position: absolute;
+  top: 70rem;
+  
+  border-bottom-left-radius: 6rem;
+}
+
+.SnakeProgressShortHorizontal {
+  width: 40rem;
+  height: 15rem;
+  
+  position: absolute;
+  top: 100rem;
+  left: 15rem;
+
+  border-top-right-radius: 6rem;
+}
+
+.SnakeProgressCenterVertical {
+  width: 15rem;
+  height: 25rem;
+  
+  position: absolute;
+  top: 115rem;
+  left: 40rem;
+  
+  border-bottom-left-radius: 6rem;
+  border-bottom-right-radius: 6rem;
+}
+
+@keyframes progress {
+  to {
+    height: 100%;
+  }
+}
