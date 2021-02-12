@@ -1,0 +1,64 @@
+.ProgressCard {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  position: relative;
+  
+  & > {
+    z-index: 1;
+  }
+  
+  .Content {
+    
+  }
+  
+  .Index {
+    position: absolute;
+    left: 50%;
+    top: -2rem;
+    font-size: 20rem;
+    font-family: 'Gilroy-Bold', sans-serif;
+    opacity: .1;
+    line-height: 1;
+    z-index: 0;
+  }
+  
+  .Ubication {
+    display: flex;
+    align-items: center;
+    
+    margin-bottom: .5rem;
+    opacity: .4;
+    font-size: 1.6rem;
+    
+    svg {
+      margin-right: .5rem;
+    }
+  }
+  
+  .Title, .Subtitle {
+    color: #4F79A4;
+  }
+  
+  .Title {
+    font-size: 3rem;
+    font-family: 'Gilroy-Bold', sans-serif;
+  }
+  
+  .Subtitle {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+    font-family: 'Gilroy-Medium', sans-serif;
+  }
+  
+  .Desc {
+    font-size: 1.2rem;
+    opacity: .4;
+  }
+  
+  img {
+    width: 40%;
+    height: auto;
+    margin: 0 2rem;
+  }
+}

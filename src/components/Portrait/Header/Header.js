@@ -4,25 +4,34 @@ import classes from './Header.module.scss';
 
 import Logo from '../../UI/Logo/Logo';
 
-const sections = [
-  'About us',
-  'Find Place',
-  'City Map',
-  'Contact'
-];
+import { scrollEventTo } from '../../../utils/style.utils';
 
-const Header = () => (
-  <header className={classes.Header}>
-    <Logo style={{ marginRight: 'auto' }}/>
-    
-    <ul className={classes.Sections}>
-      {
-        sections.map(section => (
-          <li key={section} className={classes.Section}>{section}</li>
-        ))
-      }
-    </ul>
-  </header>
-);
+const Header = ({ changeSection }) => {
+  const sections = [
+    { name: 'Posibilities', section: 'posibilities' },
+    { name: 'City Map', section: 'city map' },
+    { name: 'Contact', section: 'contact' }
+  ];
+  
+  return (
+    <header className={classes.Header}>
+      <Logo style={{ marginRight: 'auto' }}/>
+      
+      <ul className={classes.Sections}>
+        {
+          sections.map(section => (
+            <li
+              key={section.name}
+              className={classes.Section}
+              onClick={changeSection.bind(null, section.section)}
+            >
+              {section.name}
+            </li>
+          ))
+        }
+      </ul>
+    </header>
+  )
+};
 
 export default Header;

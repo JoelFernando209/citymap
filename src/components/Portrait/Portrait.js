@@ -7,9 +7,9 @@ import PortraitClouds from './PortraitClouds/PortraitClouds';
 
 import classes from './Portrait.module.scss';
 
-const Portrait = () => (
+const Portrait = ({ changeSection }) => (
   <div className={classes.Portrait}>
-    <Header />
+    <Header changeSection={changeSection} />
     
     <div className={classes.PortraitSearch}>
       <PortraitDesc />

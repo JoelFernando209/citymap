@@ -1,0 +1,44 @@
+.AppPresentation {
+  margin: 15rem 0;
+  margin-bottom: 2rem;
+  width: 100%;
+  height: 75rem;
+  background-image: url('../../assets/app-background.svg');
+  background-size: cover;
+  background-position: center;
+  
+  display: flex;
+  justify-content: center;
+  
+  img {
+    
+    width: auto;
+    height: 50rem;
+  }
+}
+
+.AppText {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin-left: 3rem;
+  color: white;
+  
+  position: relative;
+  top: 25%;
+}
+
+.Title {
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 5rem;
+}
+
+.Desc {
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+}
+
+.DownloadButtons {
+  display: flex;
+  justify-content: space-around;
+}

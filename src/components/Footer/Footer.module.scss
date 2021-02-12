@@ -1,0 +1,57 @@
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  
+  .FooterLeft, .FooterRight {
+    position: relative;
+  }
+  
+  .FooterLeft {
+    bottom: -1.5rem;
+  }
+  
+  .FooterRight {
+    bottom: -4rem;
+  }
+  
+  .Content {
+    flex: 1;
+    color: rgba(black, .4);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .TextFooter {
+    flex: 1;
+    
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      width: 50%;
+    }
+  }
+  
+  .ListFooter {
+    list-style: none;
+  }
+  
+  li {
+    cursor: pointer;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  .Author {
+    margin-bottom: 2rem;
+  }
+  
+  .AuthorEmail {
+    color: #13F1FC;
+  }
+}

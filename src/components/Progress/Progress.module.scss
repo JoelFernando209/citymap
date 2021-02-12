@@ -1,102 +1,57 @@
 @mixin animationScroll() {
   animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
+  animation-delay: calc((var(--scroll) - 0.536968) * -1s);
   animation-iteration-count: 1;
   animation-fill-mode: both;
 }
 
 .Progress {
-  padding: 0 6rem;
-  position: relative;
+  padding: 6rem;
+  
+  display: flex;
+}
+
+.SideContent {
+  flex: 1;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
+  &Right {
+    padding-top: 25rem;
+  }
+  
+  &Left {
+    padding-bottom: 3rem;
+  }
 }
 
 .SnakeProgress {
   overflow: hidden;
   background-color: rgba(#E6E8EC, 10%);
-  
+  height: 75rem;
+  width: 10rem;
+  border-radius: 16rem;
+  position: relative;
+
   &::after {
     content: '';
     width: 100%;
-    height: 0%;
-    background-color: #70DDFF;
+    height: 0;
     position: absolute;
     top: 0;
     left: 0;
-    animation: progress 1s linear;
+    border-radius: inherit;
+    background-color: #70DDFF;
+    animation: animationSnake 1s linear;
     
     @include animationScroll();
   }
 }
 
-.SnakeProgressLeftVertical {
-  width: 15rem;
-  height: 25rem;
-  border-radius: 1rem;
-  border-bottom-left-radius: 6rem;
-  position: relative;
-}
-
-.SnakeProgressHorizontal {
-  width: calc(100% - 26rem);
-  height: 15rem;
-  
-  position: absolute;
-  top: 10rem;
-  left: 20rem;
-  border-top-right-radius: 6rem;
-}
-
-.SnakeProgressRightVertical {
-  width: 15rem;
-  height: 45rem;
-  position: absolute;
-  right: 6rem;
-  border-bottom-right-radius: 6rem;
-}
-
-.SnakeProgressLastHorizontal {
-  width: calc(100% - 26rem);
-  height: 15rem;
-  
-  position: absolute;
-  top: 55rem;
-  border-top-left-radius: 6rem;
-}
-
-.SnakeProgressRightLastVertical {
-  width: 15rem;
-  height: 45rem;
-  
-  position: absolute;
-  top: 70rem;
-  
-  border-bottom-left-radius: 6rem;
-}
-
-.SnakeProgressShortHorizontal {
-  width: 40rem;
-  height: 15rem;
-  
-  position: absolute;
-  top: 100rem;
-  left: 15rem;
-
-  border-top-right-radius: 6rem;
-}
-
-.SnakeProgressCenterVertical {
-  width: 15rem;
-  height: 25rem;
-  
-  position: absolute;
-  top: 115rem;
-  left: 40rem;
-  
-  border-bottom-left-radius: 6rem;
-  border-bottom-right-radius: 6rem;
-}
-
-@keyframes progress {
+@keyframes animationSnake {
   to {
     height: 100%;
   }
