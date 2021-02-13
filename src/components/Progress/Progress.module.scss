@@ -1,6 +1,6 @@
 @mixin animationScroll() {
   animation-play-state: paused;
-  animation-delay: calc((var(--scroll) - 0.536968) * -1s);
+  animation-delay: calc((var(--scroll) + 0.2) * -1s);
   animation-iteration-count: 1;
   animation-fill-mode: both;
 }
