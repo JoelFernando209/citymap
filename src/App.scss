@@ -1,7 +1,17 @@
 @import '~antd/dist/antd.css';
 
+@import './scss/mixins.scss';
+
 html {
   font-size: 62.5%;
+  
+  @include respond(big-desktop) {
+    font-size: 73%;
+  }
+  
+  @include respond(tablet) {
+    font-size: 60%;
+  }
 }
 
 body {

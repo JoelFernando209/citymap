@@ -1,13 +1,24 @@
+@import '../../scss/mixins.scss';
+
 .Portrait {
   padding: 3rem 10rem;
   padding-bottom: 20vh;
-  height: 120vh;
+  height: 110rem;
   background-image: linear-gradient(to bottom right, #0470DC, #13F1FC);
   
   display: flex;
   flex-direction: column;
   
   position: relative;
+  
+  @media(max-height: 950px) {
+    height: 120vh;
+  }
+  
+  @include respond(desktop) {
+    padding: 3rem 6rem;
+    padding-bottom: 20vh;
+  }
 }
 
 .PortraitSearch {
@@ -15,4 +26,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
+  @include respond(tablet) {
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem 0;
+  }
 }
