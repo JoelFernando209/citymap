@@ -19,6 +19,11 @@
     padding: 3rem 6rem;
     padding-bottom: 20vh;
   }
+  
+  @include respond(tablet) {
+    padding: 3rem;
+    padding-bottom: 20vh;
+  }
 }
 
 .PortraitSearch {
@@ -31,5 +36,9 @@
     flex-direction: column;
     text-align: center;
     padding: 4rem 0;
+  }
+  
+  @media(max-height: 950px) {
+    align-items: center;
   }
 }

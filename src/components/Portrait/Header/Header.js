@@ -15,7 +15,7 @@ const Header = ({ changeSection }) => {
   
   return (
     <header className={classes.Header}>
-      <Logo style={{ marginRight: 'auto' }}/>
+      <Logo className={classes.Logo} />
       
       <ul className={classes.Sections}>
         {

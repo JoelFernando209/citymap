@@ -1,7 +1,14 @@
+@import '../../../scss/mixins.scss';
+
 .Header {
   display: flex;
   align-items: center;
   padding: 1rem 0;
+  
+  @include respond(phone) {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .Sections {
@@ -13,6 +20,18 @@
   justify-content: space-between;
   color: white;
   margin: 0;
+  
+  @include respond(desktop) {
+    min-width: 25%;
+  }
+  
+  @include respond(tablet) {
+    min-width: 30%;
+  }
+  
+  @include respond(phone) {
+    min-width: 45%;
+  }
 }
 
 .Section {
@@ -21,6 +40,7 @@
   cursor: pointer;
   position: relative;
   transition: all .3s;
+  margin: 0 1rem;
   
   &:active {
     color: #ccc;
@@ -40,5 +60,16 @@
   
   &:hover::after {
     width: 100%;
+  }
+}
+
+.Logo {
+  margin-right: auto;
+  
+  @include respond(phone) {
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
   }
 }

@@ -12,6 +12,12 @@
   
   position: relative;
   
+  transform: translateY(2rem);
+  
+  @media (max-height: 700px) {
+    display: none;
+  }
+  
   .Location {
     width: 25rem;
     height: 25rem;

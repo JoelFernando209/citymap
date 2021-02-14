@@ -1,5 +1,8 @@
 .Logo {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  
   position: relative;
 
   img {
@@ -9,11 +12,16 @@
 }
 
 .LogoName {
-  position: absolute;
+  /*position: relative;
   top: 50%;
   left: 5.5rem;
   transform: translateY(-50%);
   
   color: white;
+  font-size: 500;*/
+  
+  display: inline-block;
+  color: white;
   font-size: 500;
+  margin-left: .5rem;
 }

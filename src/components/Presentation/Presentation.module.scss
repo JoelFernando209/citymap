@@ -1,3 +1,5 @@
+@import '../../scss/mixins.scss';
+
 .Presentation {
   padding: 10rem 0;
   background-color: white;
@@ -17,6 +19,16 @@
   img {
     width: 55rem;
     height: 40rem;
+    
+    @include respond(phone) {
+      width: 45rem;
+      height: 30rem;
+    }
+    
+    @include respond(sm-phone) {
+      width: 35rem;
+      height: 20rem;
+    }
   }
 }
 
@@ -29,6 +41,10 @@
   font-size: 4.5rem;
   font-size: 600;
   font-family: 'Gilroy-Bold', sans-serif;
+  
+  @include respond(phone) {
+    font-size: 4rem;
+  }
 }
 
 .Subtitle {
@@ -36,4 +52,8 @@
   font-size: 300;
   font-family: 'Gilroy-Regular', sans-serif;
   margin-bottom: 3rem;
+  
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 }

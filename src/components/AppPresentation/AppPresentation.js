@@ -14,7 +14,7 @@ const AppPresentation = ({ currentSection, changeRefElement }) => {
     textTransform: 'uppercase',
     alignItems: 'center',
     display: 'inline-flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   }
   
   if(currentSection === 'city map') {
