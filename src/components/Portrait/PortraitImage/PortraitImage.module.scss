@@ -14,7 +14,7 @@
   
   transform: translateY(2rem);
   
-  @media (max-height: 700px) {
+  @media (max-height: 700px) and (max-width: 947px) {
     display: none;
   }
   
