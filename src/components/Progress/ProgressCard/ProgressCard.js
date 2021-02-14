@@ -5,7 +5,6 @@ import classes from './ProgressCard.module.scss';
 import { MdLocationOn } from 'react-icons/md';
 
 const ProgressCard = ({ icon, direction, distanceKm, title, subtitle, children, index }) => {
-  
   let style = {
     flexDirection: 'row'
   }
